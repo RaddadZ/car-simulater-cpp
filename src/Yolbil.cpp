@@ -1,34 +1,21 @@
-class Yolbil
-{
-private:
-	const int YAKITUYARI = 2;
-	double ortHiz;
-	double genelKilometre;
-	double yerelKilometre;
-	double surmeZaman
+#include "Yolbil.hpp"
 
-public:
-	Yolbil();
-	~Yolbil();
+void Yolbil::kilometreEkle(double kilometre){
+	genelKilometre += kilometre;
+	yerelKilometre += kilometre;
+}
 
-	void kilometreEkle(double kilometre){
-		genelKilometre += kilometre;
-		yerelKilometre += kilometre;
-	}
+void Yolbil::zamanEkle(double zaman){
+	toplamSurmeZaman += zaman;
+}
 
-	void zamanEkle(double zaman){
-		surmeZaman += zaman;
-	}
+void Yolbil::setYerelKM(double km){
+	yerelKilometre=km;
+}
+double Yolbil::getYerelKM(){
+	return yerelKilometre;
+}
 
-	void setYerelKM(double km){
-		yerelKilometre=km;
-	}
-	double getYerelKM(){
-		return yerelKilometre;
-	}
-
-	double getGenelKM(){
-		return genelKilometre;
-	}
-	
-};
+double Yolbil::getGenelKM(){
+	return genelKilometre;
+}

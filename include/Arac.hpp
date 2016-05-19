@@ -1,21 +1,24 @@
+#include "Yolbil.hpp"
+
 #ifndef ARAC_HPP
 #define ARAC_HPP
-class Araba
+
+class Arac
 {
 private:
-	const int DEPOKAPASITE;
-	const int MAXHIZ = 180;
-	const int HM050 = 15;
-	const int HM5075 = 12;
-	const int HM75110 = 9;
-	const int HM110MAX = 6;
+	static const int DEPOKAPASITE = 10;
+	static const int MAXHIZ = 180;
+	static const int HM050 = 15;
+	static const int HM5075 = 12;
+	static const int HM75110 = 9;
+	static const int HM110MAX = 6;
 
 	double depodakiYakit;
 	Yolbil *bilgisayar;
 
 public:
-	Araba();
-	~Araba();
+	Arac();
+	~Arac();
 	void aracSur(double, double);
 	void benzinAl(double);
 	void kilometreSifirla();
