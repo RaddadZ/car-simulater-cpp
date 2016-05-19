@@ -19,5 +19,16 @@ public:
 	void zamanEkle(double zaman){
 		surmeZaman += zaman;
 	}
+
+	void setYerelKM(double km){
+		yerelKilometre=km;
+	}
+	double getYerelKM(){
+		return yerelKilometre;
+	}
+
+	double getGenelKM(){
+		return genelKilometre;
+	}
 	
 };

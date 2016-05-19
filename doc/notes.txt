@@ -1,0 +1,6 @@
+note:
+	fiziksel araba ozelliklerini Araba sinifina yazdik, bilgisayar ile hesaplanacak degiskenler ise Yolbil sinifina yazdik;
+	
+
+karsilastigimiz sorunlar:
+	header dosyasinda const degisken tanimlamk - daha cozulmadi;
