@@ -1,6 +1,9 @@
 #ifndef YOLBIL_HPP
 #define YOLBIL_HPP
 
+#include "DepoHatasi.hpp"
+
+
 class Yolbil
 {
 private:
@@ -25,6 +28,7 @@ public:
 	double getOrtHiz();
 	double getOrtYakit();
 	double getMenzil();
+	void setMenzil(double);
 	void ortHizHesapla();
 	void ortYakitHesapla(double);
 	void menzilHesapla(double,double);
