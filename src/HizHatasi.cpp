@@ -1,3 +1,7 @@
 #include "HizHatasi.hpp"
+#include "Hata.hpp"
 
-	HizHatasi::HizHatasi(const string &msg):Hata::Hata(msg){ }
+#include <string>
+using std::string;
+
+	HizHatasi::HizHatasi(const string &msg):Hata(msg){ }

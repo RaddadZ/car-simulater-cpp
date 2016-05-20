@@ -2,10 +2,12 @@
 #define HIZHATASI_HPP
 
 #include "Hata.hpp"
+#include <string>
+using std::string;
 
-class HizHatasi : public Hata {
+class HizHatasi: public Hata {
 	public :
-		HizHatasi(string);
+		HizHatasi(const string &msg);
 };
 
 #endif
