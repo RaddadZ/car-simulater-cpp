@@ -1,5 +1,4 @@
 #include "Arac.hpp"
-#include "Yolbil.hpp"
 #include <iostream>
 using namespace std;
 
@@ -15,10 +14,10 @@ Arac::~Arac() {
 void Arac::aracSur(double ortHiz, double kilometre){
 	double harcananYakit=0;
 	double surmeZaman=0;
-	try {
-		if (ortHiz < 0) throw HizHatasi("hiz sifir altinda");
-		if (ortHiz > MAXHIZ) throw HizHatasi("hiz maxin altinda");
-		if (kilometre < 0) throw MesafeHatasi("mesafe sifir altinda");
+	// try {
+	// 	if (ortHiz < 0) throw HizHatasi("hiz sifir altinda");
+	// 	if (ortHiz > MAXHIZ) throw HizHatasi("hiz maxin altinda");
+	// 	if (kilometre < 0) throw MesafeHatasi("mesafe sifir altinda");
 
 		if (0 < ortHiz && ortHiz <= 50)
 		harcananYakit = HM050*kilometre/100;
@@ -29,34 +28,34 @@ void Arac::aracSur(double ortHiz, double kilometre){
 		else 
 			harcananYakit = HM110MAX*kilometre/100;
 
-		if (harcananYakit > depodakiYakit) throw DepoHatasi("yakit yetmiyor");
+		// if (harcananYakit > depodakiYakit) throw DepoHatasi("yakit yetmiyor");
 		depodakiYakit-= harcananYakit;
 		surmeZaman = kilometre / ortHiz;
 		bilgisayar->kilometreEkle(kilometre);
 		bilgisayar->zamanEkle(surmeZaman);
-	}
-	catch (HizHatasi &err){
-		cout << "Hiz: " << err.mesaj() << "\n";
-	}
-	catch (MesafeHatasi &err){
-		cout << "Mesafe: " << err.mesaj() << "\n";
-	}
-	catch (DepoHatasi &err){
-		cout << "Depo: " << err.mesaj() << "\n";
-	}
+	// }
+	// catch (HizHatasi &err){
+	// 	cout << "Hiz: " << err.mesaj() << "\n";
+	// }
+	// catch (MesafeHatasi &err){
+	// 	cout << "Mesafe: " << err.mesaj() << "\n";
+	// }
+	// catch (DepoHatasi &err){
+	// 	cout << "Depo: " << err.mesaj() << "\n";
+	// }
 }
 
 void Arac::benzinAl(double litre){
-	try {
-		if (litre < 0) throw DepoHatasi("girilen litre sifirin altinda");
-		if (litre > DEPOKAPASITE) throw DepoHatasi("girilen litre depo kapasitesinden buyuktur")
+	// try {
+	// 	if (litre < 0) throw DepoHatasi("girilen litre sifirin altinda");
+	// 	if (litre > DEPOKAPASITE) throw DepoHatasi("girilen litre depo kapasitesinden buyuktur")
 		depodakiYakit += litre;
-	}
-	catch (DepoHatasi &err){
-		cout << "Depo: " << err.mesaj() << "\n";
-	}
+	// }
+	// catch (DepoHatasi &err){
+	// 	cout << "Depo: " << err.mesaj() << "\n";
+	// }
 }
 
 void Arac::kilometreSifirla() {
-	bilgisayar->setYerelKM(0);
+	bilgisayar->kilometreSifirla();
 }

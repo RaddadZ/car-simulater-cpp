@@ -5,6 +5,7 @@ class Yolbil
 {
 private:
 	static const int YAKITUYARI = 2; //litre
+	// int YAKITUYARI;
 	double ortHiz; // km/saat
 	double ortYakit; // litre
 	double genelKilometre;
@@ -13,13 +14,14 @@ private:
 
 public:
 	Yolbil();
-	~Yolbil();
+	// ~Yolbil();
+	int gYAKITUYARI() const;
 	void kilometreEkle(double);
 	void zamanEkle(double);
-	void setYerelKM(double);
+	void kilometreSifirla();
 	double getYerelKM();
 	double getGenelKM();
-	
+	void ortHizHesapla();
 };
 #endif
 
