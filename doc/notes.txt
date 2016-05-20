@@ -4,10 +4,12 @@ note:
 	ortalama hiz her arabanin suruldugunde hesaplanir ve biligsayardaki ortHiz degiskenine atilir, ortalama yakit hesaplanirken kullanilir
 	genellesirsek bilgisayar guncelleniyor
 	;
-
+	Hata sınıflarını hepsini statik kütüphane oluşturduk. Statik kütüphaneyi de ./lib altında yeni bir makefile ile oluşturuyoruz.
+	;
 
 karsilastigimiz sorunlar:
 	sorun, header dosyasinda const degisken tanimlamk
 	cozum, static const ekleyince header dosyasinda tanimli olur
 	kaynak, http://stackoverflow.com/questions/18386168/invalid-use-of-non-static-data-memeber
 	;
+

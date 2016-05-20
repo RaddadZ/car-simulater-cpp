@@ -1,4 +1,5 @@
 #include "Arac.hpp"
+#include "HizHatasi.hpp"
 #include <iostream>
 using namespace std;
 
@@ -24,7 +25,6 @@ int main(){
 	cout << araba->bilgisayar->getOrtHiz() << " ort hiz \n";
 	cout << araba->bilgisayar->getMenzil() << " menzil \n";
 	cout << araba->bilgisayar->getOrtYakit() << " ort yakit\n";
-	cout << "done\n";
 
 	araba->benzinAl(20);
 	araba->aracSur(40,80);
@@ -36,7 +36,6 @@ int main(){
 	cout << araba->bilgisayar->getMenzil() << " menzil \n";
 	cout << araba->bilgisayar->getOrtYakit() << " ort yakit\n";
 	cout << "done\n";
-
 
 	return 0;
 }
