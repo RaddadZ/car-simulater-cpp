@@ -1,23 +1,43 @@
-class Yolbil
-{
-private:
-	const int YAKITUYARI = 2;
-	double ortHiz;
-	double genelKilometre;
-	double yerelKilometre;
-	double surmeZaman
+#include "Yolbil.hpp"
 
-public:
-	Yolbil();
-	~Yolbil();
+Yolbil::Yolbil(){
+	// YAKITUYARI = 2;
+	genelKilometre = 0;
+	kilometreSifirla();
+}
 
-	void kilometreEkle(double kilometre){
-		genelKilometre += kilometre;
-		yerelKilometre += kilometre;
-	}
+int Yolbil::gYAKITUYARI() const{
+	return YAKITUYARI;
+}
 
-	void zamanEkle(double zaman){
-		surmeZaman += zaman;
-	}
-	
-};
+void Yolbil::kilometreEkle(double kilometre){
+	genelKilometre += kilometre;
+	yerelKilometre += kilometre;
+}
+
+void Yolbil::zamanEkle(double zaman){
+	toplamSurmeZaman += zaman;
+}
+void Yolbil::kilometreSifirla(){
+	ortHiz = 0; // km/saat
+	ortYakit = 0; // litre
+	yerelKilometre = 0; // km
+	toplamSurmeZaman = 0; // saat cinsinden
+}
+double Yolbil::getYerelKM(){
+	return yerelKilometre;
+}
+
+double Yolbil::getGenelKM(){
+	return genelKilometre;
+}
+
+void Yolbil::ortHizHesapla(){
+	// try {
+	// 	if (toplamSurmeZaman == 0) throw MatHatasi("Zaman sifirdir, sifira bolunmez");
+		ortHiz = yerelKilometre / toplamSurmeZaman;
+	// }
+	// catch(MatHatasi &err){
+	// 	cout << "Zaman: " << err.mesaj() << "\n";
+	// }
+}

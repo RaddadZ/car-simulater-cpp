@@ -1,0 +1,10 @@
+note:
+	fiziksel araba ozelliklerini Araba sinifina yazdik, bilgisayar ile hesaplanacak degiskenler ise Yolbil sinifina yazdik
+	;
+
+
+karsilastigimiz sorunlar:
+	sorun, header dosyasinda const degisken tanimlamk
+	cozum, static ekleyince header dosyasinda tanimli olur
+	kaynak, http://stackoverflow.com/questions/18386168/invalid-use-of-non-static-data-memeber
+	;
