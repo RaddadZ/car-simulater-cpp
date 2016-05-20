@@ -10,36 +10,37 @@ Arac::~Arac() {
 	delete bilgisayar;
 }
 
-
-void Arac::aracSur(double ortHiz, double kilometre){
-	double harcananYakit=0;
-	double surmeZaman=0;
+double harcamaOrani(double hiz){
 	// try {
-	// 	if (ortHiz < 0) throw HizHatasi("hiz sifir altinda");
-	// 	if (ortHiz > MAXHIZ) throw HizHatasi("hiz maxin altinda");
-	// 	if (kilometre < 0) throw MesafeHatasi("mesafe sifir altinda");
-
-		if (0 < ortHiz && ortHiz <= 50)
-		harcananYakit = HM050*kilometre/100;
-		else if (50 < ortHiz && ortHiz <= 75)
-			harcananYakit = HM5075*kilometre/100;
-		else if (75 < ortHiz && ortHiz <= 110)
-			harcananYakit = HM75110*kilometre/100;
-		else 
-			harcananYakit = HM110MAX*kilometre/100;
-
-		// if (harcananYakit > depodakiYakit) throw DepoHatasi("yakit yetmiyor");
-		depodakiYakit-= harcananYakit;
-		surmeZaman = kilometre / ortHiz;
-		bilgisayar->kilometreEkle(kilometre);
-		bilgisayar->zamanEkle(surmeZaman);
+	// 	if (hiz < 0) throw HizHatasi("hiz sifir altinda");
+	// 	if (hiz > MAXHIZ) throw HizHatasi("hiz maxin altinda");
+		if (0 < hiz && hiz <= 50)
+			return HM050;
+		if (50 < hiz && hiz <= 75)
+			return HM5075;
+		if (75 < hiz && hiz <= 110)
+			return HM75110;
+		return HM110MAX;
 	// }
 	// catch (HizHatasi &err){
 	// 	cout << "Hiz: " << err.mesaj() << "\n";
 	// }
-	// catch (MesafeHatasi &err){
-	// 	cout << "Mesafe: " << err.mesaj() << "\n";
-	// }
+}
+
+
+void Arac::aracSur(double ortHiz, double kilometre){
+	double harcananYakit = 0;
+	double harcamaOrani = 0;
+	// try{
+		harcamaOrani = harcamaOrani(ortHiz);
+		harcananYakit = harcamaOrani*kilometre/100;
+	// if (harcananYakit > depodakiYakit) throw DepoHatasi("yakit yetmiyor");
+		depodakiYakit-= harcananYakit;
+		bilgisayar->kilometreEkle(kilometre);
+		bilgisayar->zamanEkle(kilometre / ortHiz);
+		bilgisayar->ortHizHesapla();
+		harcamaOrani = harcamaOrani(bilgisayar->getOrtHiz());
+		bilgisayar->ortYakitHesapla(harcamaOrani);
 	// catch (DepoHatasi &err){
 	// 	cout << "Depo: " << err.mesaj() << "\n";
 	// }
@@ -59,3 +60,6 @@ void Arac::benzinAl(double litre){
 void Arac::kilometreSifirla() {
 	bilgisayar->kilometreSifirla();
 }
+
+
+
