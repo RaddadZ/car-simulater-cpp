@@ -13,15 +13,17 @@ private:
 	static const int HM75110 = 9;
 	static const int HM110MAX = 6;
 
-	double depodakiYakit;
-	Yolbil *bilgisayar;
+	
 
 public:
 	Arac();
 	~Arac();
+	double depodakiYakit;
+	Yolbil *bilgisayar;
 	void aracSur(double, double);
 	void benzinAl(double);
 	void kilometreSifirla();
+	double harcamaOrani(double);
 
 };
 #endif

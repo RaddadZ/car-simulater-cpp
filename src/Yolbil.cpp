@@ -32,6 +32,10 @@ double Yolbil::getGenelKM(){
 	return genelKilometre;
 }
 
+double Yolbil::getOrtHiz(){
+	return ortHiz;
+}
+
 void Yolbil::ortHizHesapla(){
 	// try {
 	// 	if (toplamSurmeZaman == 0) throw MatHatasi("Zaman sifirdir, sifira bolunmez");
@@ -40,4 +44,8 @@ void Yolbil::ortHizHesapla(){
 	// catch(MatHatasi &err){
 	// 	cout << "Zaman: " << err.mesaj() << "\n";
 	// }
+}
+
+void Yolbil::ortYakitHesapla(double oran){
+	ortYakit = oran*yerelKilometre/100;
 }

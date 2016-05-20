@@ -21,7 +21,10 @@ public:
 	void kilometreSifirla();
 	double getYerelKM();
 	double getGenelKM();
+	double getOrtHiz();
 	void ortHizHesapla();
+	void ortYakitHesapla();
+
 };
 #endif
 
