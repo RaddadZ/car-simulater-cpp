@@ -11,6 +11,7 @@ private:
 	double genelKilometre;
 	double yerelKilometre; // km
 	double toplamSurmeZaman; // saat cinsinden
+	double menzil;
 
 public:
 	Yolbil();
@@ -22,9 +23,11 @@ public:
 	double getYerelKM();
 	double getGenelKM();
 	double getOrtHiz();
+	double getOrtYakit();
+	double getMenzil();
 	void ortHizHesapla();
-	void ortYakitHesapla();
-
+	void ortYakitHesapla(double);
+	void menzilHesapla(double,double);
 };
 #endif
 

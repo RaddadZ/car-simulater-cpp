@@ -1,4 +1,5 @@
 #include "Yolbil.hpp"
+#include "Arac.hpp"
 
 Yolbil::Yolbil(){
 	// YAKITUYARI = 2;
@@ -36,6 +37,15 @@ double Yolbil::getOrtHiz(){
 	return ortHiz;
 }
 
+double Yolbil::getOrtYakit(){
+	return ortYakit;
+}
+
+
+double Yolbil::getMenzil(){
+	return menzil;
+}
+
 void Yolbil::ortHizHesapla(){
 	// try {
 	// 	if (toplamSurmeZaman == 0) throw MatHatasi("Zaman sifirdir, sifira bolunmez");
@@ -48,4 +58,8 @@ void Yolbil::ortHizHesapla(){
 
 void Yolbil::ortYakitHesapla(double oran){
 	ortYakit = oran*yerelKilometre/100;
+}
+
+void Yolbil::menzilHesapla(double oran, double yakit){
+	menzil = 100 * yakit / oran;
 }

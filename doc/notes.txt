@@ -2,6 +2,7 @@ note:
 	fiziksel araba ozelliklerini Araba sinifina yazdik, bilgisayar ile hesaplanacak degiskenler ise Yolbil sinifina yazdik
 	;
 	ortalama hiz her arabanin suruldugunde hesaplanir ve biligsayardaki ortHiz degiskenine atilir, ortalama yakit hesaplanirken kullanilir
+	genellesirsek bilgisayar guncelleniyor
 	;
 
 

@@ -10,7 +10,7 @@ Arac::~Arac() {
 	delete bilgisayar;
 }
 
-double harcamaOrani(double hiz){
+double Arac::harcamaOraniHesapla(double hiz){
 	// try {
 	// 	if (hiz < 0) throw HizHatasi("hiz sifir altinda");
 	// 	if (hiz > MAXHIZ) throw HizHatasi("hiz maxin altinda");
@@ -28,19 +28,24 @@ double harcamaOrani(double hiz){
 }
 
 
-void Arac::aracSur(double ortHiz, double kilometre){
+void Arac::aracSur(double hiz, double kilometre){
 	double harcananYakit = 0;
 	double harcamaOrani = 0;
 	// try{
-		harcamaOrani = harcamaOrani(ortHiz);
+		harcamaOrani = harcamaOraniHesapla(hiz);
+
 		harcananYakit = harcamaOrani*kilometre/100;
 	// if (harcananYakit > depodakiYakit) throw DepoHatasi("yakit yetmiyor");
 		depodakiYakit-= harcananYakit;
+
+		// bilgisayar guncellenir
 		bilgisayar->kilometreEkle(kilometre);
-		bilgisayar->zamanEkle(kilometre / ortHiz);
+		bilgisayar->zamanEkle(kilometre / hiz);
 		bilgisayar->ortHizHesapla();
-		harcamaOrani = harcamaOrani(bilgisayar->getOrtHiz());
+		harcamaOrani = harcamaOraniHesapla(bilgisayar->getOrtHiz());
 		bilgisayar->ortYakitHesapla(harcamaOrani);
+		bilgisayar->menzilHesapla(harcamaOrani,depodakiYakit);
+
 	// catch (DepoHatasi &err){
 	// 	cout << "Depo: " << err.mesaj() << "\n";
 	// }

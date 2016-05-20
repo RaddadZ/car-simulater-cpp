@@ -4,40 +4,39 @@ using namespace std;
 
 int main(){
 	Arac *araba = new Arac();
+
+	
 	araba->benzinAl(20);
 
-
-	cout << araba->depodakiYakit << "\n";
-	cout << araba->bilgisayar->getGenelKM() << "\n";
-	cout << araba->bilgisayar->gYAKITUYARI() << "\n";
-	cout << araba->bilgisayar->getYerelKM() << "\n";
-	cout << araba->bilgisayar->getOrtHiz() << "\n";
+	cout << araba->depodakiYakit << " depodaki yakit\n";
+	cout << araba->bilgisayar->getGenelKM() << " genel km \n";
+	cout << araba->bilgisayar->getYerelKM() << " yerel km \n";
+	cout << araba->bilgisayar->getOrtHiz() << " ort hiz \n";
+	cout << araba->bilgisayar->getMenzil() << " menzil \n";
+	cout << araba->bilgisayar->getOrtYakit()  << " ort yakit\n";
 	cout << "done\n";
 
+	araba->aracSur(90,200);
 
-	araba->aracSur(50,200);
-	araba->benzinAl(15);
-	araba->kilometreSifirla();
-	araba->aracSur(120,50);
-
-
-	cout << araba->depodakiYakit << "\n";
-	cout << araba->bilgisayar->getGenelKM() << "\n";
-	cout << araba->bilgisayar->gYAKITUYARI() << "\n";
-	cout << araba->bilgisayar->getYerelKM() << "\n";
-	cout << araba->bilgisayar->getOrtHiz() << "\n";
+	cout << araba->depodakiYakit << " depodaki yakit\n";
+	cout << araba->bilgisayar->getGenelKM() << " genel km \n";
+	cout << araba->bilgisayar->getYerelKM() << " yerel km \n";
+	cout << araba->bilgisayar->getOrtHiz() << " ort hiz \n";
+	cout << araba->bilgisayar->getMenzil() << " menzil \n";
+	cout << araba->bilgisayar->getOrtYakit() << " ort yakit\n";
 	cout << "done\n";
 
-	araba->aracSur(80,70);
-	araba->benzinAl(15);
-	araba->aracSur(180,20);
+	araba->benzinAl(20);
+	araba->aracSur(40,80);
 
-	cout << araba->depodakiYakit << "\n";
-	cout << araba->bilgisayar->getGenelKM() << "\n";
-	cout << araba->bilgisayar->gYAKITUYARI() << "\n";
-	cout << araba->bilgisayar->getYerelKM() << "\n";
-	cout << araba->bilgisayar->getOrtHiz() << "\n";
+	cout << araba->depodakiYakit << " depodaki yakit\n";
+	cout << araba->bilgisayar->getGenelKM() << " genel km \n";
+	cout << araba->bilgisayar->getYerelKM() << " yerel km \n";
+	cout << araba->bilgisayar->getOrtHiz() << " ort hiz \n";
+	cout << araba->bilgisayar->getMenzil() << " menzil \n";
+	cout << araba->bilgisayar->getOrtYakit() << " ort yakit\n";
 	cout << "done\n";
+
 
 	return 0;
 }

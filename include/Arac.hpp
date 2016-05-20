@@ -13,8 +13,6 @@ private:
 	static const int HM75110 = 9;
 	static const int HM110MAX = 6;
 
-	
-
 public:
 	Arac();
 	~Arac();
@@ -23,7 +21,7 @@ public:
 	void aracSur(double, double);
 	void benzinAl(double);
 	void kilometreSifirla();
-	double harcamaOrani(double);
+	double harcamaOraniHesapla(double);
 
 };
 #endif
