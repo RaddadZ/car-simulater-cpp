@@ -1,5 +1,4 @@
 #include "Arac.hpp"
-
 #include <iostream>
 using namespace std;
 
@@ -42,13 +41,13 @@ void Arac::aracSur(double hiz, double kilometre){
 		bilgisayar->ortYakitHesapla(harcamaOrani);
 	}
 	catch (DepoHatasi &err){
-		cout << "Depo: " << err.Mesaj() << "\n";
+		cout << err.Mesaj() << "\n";
 	}
 	catch (HizHatasi &err){
-		cout << "Hiz: " << err.Mesaj() << "\n";
+		cout << err.Mesaj() << "\n";
 	}
 	catch (MesafeHatasi &err){
-		cout << "MesafeHatasi: " << err.Mesaj() << "\n";
+		cout << err.Mesaj() << "\n";
 	}
 }
 
@@ -59,7 +58,7 @@ void Arac::benzinAl(double litre){
 		depodakiYakit += litre;
 	}
 	catch (DepoHatasi &err){
-		cout << "Depo: " << err.Mesaj() << "\n";
+		cout << err.Mesaj() << "\n";
 	}
 }
 
@@ -70,7 +69,7 @@ void Arac::menzilHesapla(){
 	}
 	catch (DepoHatasi &err){
 		bilgisayar->setMenzil(0);
-		cout << "Depo: " << err.Mesaj() << "\n";
+		cout << err.Mesaj() << "\n";
 	}
 }
 

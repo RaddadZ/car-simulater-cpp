@@ -4,4 +4,4 @@
 #include <string>
 using std::string;
 
-	MesafeHatasi::MesafeHatasi(const string &msg):Hata(msg){ }
+	MesafeHatasi::MesafeHatasi(const string &msg):Hata("Mesafe: "+msg){ }

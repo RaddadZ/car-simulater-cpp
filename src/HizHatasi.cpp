@@ -4,4 +4,4 @@
 #include <string>
 using std::string;
 
-	HizHatasi::HizHatasi(const string &msg):Hata(msg){ }
+	HizHatasi::HizHatasi(const string &msg):Hata("Hiz: "+msg){ }
